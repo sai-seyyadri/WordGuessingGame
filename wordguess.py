@@ -19,9 +19,9 @@ def guess_word(word, word_think):
 def character_collected(word):
     guess_character = []
     total_chances = 3 
-    winner='no one'
+    winner='No one'
     winnerscore=100
-    print("Welcome!! to Word Guessing Game")
+    print("Welcome to Word Guessing Game! The theme is Fruits! ")
     print("For more information & instructions please look at README.md") 
     print ("The word you are going to guess is "+ str(len(word)) + " characters long" )
     NumberofPlayers = int(input("Enter number of players to play\n"))
@@ -72,15 +72,15 @@ def character_collected(word):
                     guess_character.clear()
                     file.write('Sorry ' + PlayerName + ' you guessed wrong still '+ str(total_chances) +' chances left and score with '+str(letterCount) +'\n')
                     break
-            print("End of game for,", PlayerName)
-            print("Number of  players remaining", NumberofPlayers) 
+            print("End of game for, ", PlayerName)
+            print("Number of players remaining ", NumberofPlayers) 
         else:
-            print(f"End of Game,Final winner is ", winner) 
-            file.write(f"End of Game, Final winner is, " + winner +'\n')  
+            print(f"End of Game, Final Winner is ", winner) 
+            file.write(f"End of Game, Final Winner is, " + winner +'\n')  
             file.write('**************************************************************************************'+'\n')            
             break        
 while True:
     word = word_choice()
     character_collected(word)
-    if input("do you want to continue y/n: ").lower().startswith("n"):
+    if input("Do you want to continue (y/n): ").lower().startswith("n"):
        break
